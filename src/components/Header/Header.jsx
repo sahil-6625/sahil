@@ -1,16 +1,19 @@
 import {Link} from 'react-router-dom'
+import './Header.css'
 const Header = () => {
     return(
         <>
-            <header>
-                <nav>
-                    <Link to="/home">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/contact">Contact</Link>
-                    <Link to="/courses">Courses</Link>
-
-                </nav>
-            </header>
+          <header class="header1">
+            <h1 class="clg-name">Vivekanand College</h1>
+                <nav> 
+                    <Link to="/home" class='nav-desc' data-discover="true">Home</Link>
+                    <Link to="/about" class='nav-desc' data-discover="true">About</Link>
+                    <Link to="/courses" class='nav-desc' data-discover="true">Courses</Link>
+                    <Link to="/contact" class='nav-desc' data-discover="true">Contact Us</Link>
+                    {/* <Link to="/apply" className='nav' data-discover="true">Apply Now!</Link> */}
+                    <button data-discover="true" class="btn"><Link to="/apply" className='nav' data-discover="true">Apply Now!</Link></button>
+                </nav>         
+        </header>
         </>
     )
 }
